@@ -48,3 +48,21 @@ class BasePage:
         element = WebDriverWait(self.driver, 10).until(EC.visibility_of_element_located(by_locator))
         ActionChains(self.driver).move_to_element(element).perform()
 
+    # check if web element is selected
+    def is_element_selected(self, by_locator):
+        element = WebDriverWait(self.driver, 10).until(EC.visibility_of_element_located(by_locator)).is_selected()
+        if element is True:
+            print("The element is selected")
+        else:
+            print("The element is not selected")
+
+    # check if web element is selected, then clicks on it
+
+    def is_element_selected_Click(self, by_locator):
+        element = WebDriverWait(self.driver, 10).until(EC.visibility_of_element_located(by_locator))
+        element_selected = element.is_selected()
+        if element_selected is not True:
+            element.click()
+        else:
+            print("The element is not selected")
+

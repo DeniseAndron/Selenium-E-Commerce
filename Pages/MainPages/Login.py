@@ -11,7 +11,7 @@ class LoginPage(BasePage):
     login_icon = (By.ID, 'menuUserSVGPath')
     username_logIn = (By.XPATH, ".//div[@class='inputContainer ng-scope']//input[@name='username']")
     password_logIn = (By.XPATH, ".//div[@class='inputContainer ng-scope']//input[@name='password']")
-    remember_me_check = (By.CLASS_NAME, 'ng-pristine ng-untouched ng-valid')
+    remember_me_check = (By.XPATH, ".//div[@class='left option ']//input[@name='remember_me']")
     login_button = (By.ID, 'sign_in_btnundefined')
 
 
@@ -29,5 +29,5 @@ class LoginPage(BasePage):
         self.enter_text(self.password_logIn, TestData.loginPassword)
 
     def RememberButton(self):
-        self.is_enabled(self.remember_me_check)
+        self.is_element_selected_Click(self.remember_me_check)
 
