@@ -66,3 +66,10 @@ class BasePage:
         else:
             print("The element is not selected")
 
+
+    def presence_located(self, by_locator):
+        try:
+            WebDriverWait(self.driver, 10).until(EC.presence_of_element_located(by_locator))
+            print ("Element is ready")
+        except TimeoutError:
+            print("Loading took to long")

@@ -29,6 +29,15 @@ class LoginPageTestCase(TestBase):
         lp = LoginPage(self.driver)
         lp.RememberButton()
 
+    def test_05_LoginButton(self):
+        lp = LoginPage(self.driver)
+        lp.LoginButton()
+
+        time.sleep(3)
+
+    def test_06_ErrorMessage(self):
+        lp = LoginPage(self.driver)
+        lp.loginError()
 
 
 
