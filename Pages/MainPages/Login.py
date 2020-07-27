@@ -27,6 +27,7 @@ class LoginPage(BasePage):
         self.enter_text(self.username_logIn, TestData.loginUserName)
 
 
+
     def PasswordLogin(self):
         self.enter_text(self.password_logIn, TestData.loginPassword)
 
@@ -41,7 +42,7 @@ class LoginPage(BasePage):
             element_success=self.driver.find_element(*self.login_success_name).text
             print("Logged in as " + element_success)
 
-        finally:
+        except:
             print("You are not logged in")
 
 
