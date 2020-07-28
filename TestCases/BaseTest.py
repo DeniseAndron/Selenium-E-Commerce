@@ -24,10 +24,10 @@ class TestBase(unittest.TestCase):
 
 
 
-    # @classmethod
-    # def tearDownClass(cls):
-    #     cls.driver.delete_all_cookies()
-    #     cls.driver.close()
+    @classmethod
+    def tearDownClass(cls):
+        cls.driver.delete_all_cookies()
+        cls.driver.close()
 
 
 if __name__ == '__main__':

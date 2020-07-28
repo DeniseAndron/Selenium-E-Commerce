@@ -40,7 +40,7 @@ class BasePage:
     # this function checks if the web element whose locator has been passed to it, is visible or not and returns
     # true or false depending upon its visibility.
     def is_visible(self, by_locator):
-        element = WebDriverWait(self.driver, 5).until(EC.visibility_of_element_located(by_locator))
+        element = WebDriverWait(self.driver, 10).until(EC.visibility_of_element_located(by_locator))
         return bool(element)
 
     # this function moves the mouse pointer over a web element whose locator has been passed to it.
