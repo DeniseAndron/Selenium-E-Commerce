@@ -1,4 +1,4 @@
-
+from selenium.webdriver.common.keys import Keys
 from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
 from selenium.webdriver.common.action_chains import ActionChains
@@ -22,6 +22,11 @@ class BasePage:
     # this function performs click on web element whose locator is passed to it.
     def click(self, by_locator):
         WebDriverWait(self.driver, 10).until(EC.visibility_of_element_located(by_locator)).click()
+
+    #this functions presses the enter button
+
+    def enter_button(self, by_locator):
+        WebDriverWait(self.driver,10).until(EC.visibility_of_element_located(by_locator)).send_keys(Keys.RETURN)
 
     # this function asserts comparison of a web element's text with passed in text.
     def assert_element_text(self, by_locator, element_text):

@@ -51,9 +51,7 @@ class Special_Offer_Test(TestBase):
         so = SpecialOfferTest(self.driver)
         so.specialOfferButton()
 
-    def test_04_special_offer_button_worked(self):
-        so = SpecialOfferTest(self.driver)
-        so.check_if_button_worked()
+
 
 
 
