@@ -47,6 +47,9 @@ class HomePageTopTest(BasePage):
     #goback homepage button
     go_back_homepage = (By.CLASS_NAME, "logo")
 
+    #menu button
+    our_products_button = ()
+
     def __init__(self, driver):
         super().__init__(driver)
         self.driver = driver
@@ -64,28 +67,25 @@ class HomePageTopTest(BasePage):
         self.hover_to(self.tablets_shop_image)
         self.click(self.tablets_shop_link)
         self.is_visible(self.tablets_title)
-        self.click(self.go_back_homepage)
+
 
 
     def laptopsLink(self):
         self.hover_to(self.laptops_shop_image)
         self.click(self.laptops_shop_link)
         self.is_visible(self.laptops_title)
-        self.click(self.go_back_homepage)
 
 
     def miceLink(self):
         self.hover_to(self.mice_shop_image)
         self.click(self.mice_shop_link)
         self.is_visible(self.mice_title)
-        self.click(self.go_back_homepage)
 
 
     def headphonesLink(self):
         self.hover_to(self.headphones_shop_image)
         self.click(self.headphones_shop_link)
         self.is_visible(self.headphones_title)
-        self.click(self.go_back_homepage)
 
 class SpecialOfferTest(BasePage):
     #locators
@@ -113,6 +113,39 @@ class SpecialOfferTest(BasePage):
         # self.click(self.special_offer_button)
         self.enter_button(self.special_offer_button)
         self.is_visible(self.check_if_button_works)
+
+
+
+class ExploreNowSlide(BasePage):
+    #locators
+    #sliders =(By.ID, "slider-steps")
+    explore_now_button = (By.XPATH, ".//div[@class='container']")
+    explore_now = (By.XPATH, ".//div[@class='container']")
+    explore_now_text = (By.XPATH, ".//div[@class='container']//h2")
+
+    def __init__(self,driver):
+        super().__init__(driver)
+        self.driver = driver
+
+    def imagesCarousel(self):
+        # this is not working yet////
+        time.sleep(3)
+        texts = []
+        texts = self.driver.find_element(*self.explore_now)
+
+        for text in texts:
+            each_text = text.find_element(*self.explore_now_text)
+            print(each_text)
+
+
+
+
+
+
+
+
+
+
 
 
 

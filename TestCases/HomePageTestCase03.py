@@ -4,8 +4,8 @@ sys.path.append("C://Users/Denisa/Desktop/selenium/firstEcommerce")
 from TestCases.BaseTest import TestBase
 from Pages.MainPages.HomePage import *
 
-# from TestData.TestData import TestData
-#
+from TestData.TestData import TestData
+
 # class HomePageTestCase(TestBase):
 #
 #     @classmethod
@@ -19,38 +19,52 @@ from Pages.MainPages.HomePage import *
 #     def test_tablets(self):
 #         hp = HomePageTopTest(self.driver)
 #         hp.tabletsLink()
+#         self.driver.back()
 #
 #     def test_laptops(self):
 #         hp = HomePageTopTest(self.driver)
 #         hp.laptopsLink()
+#         self.driver.back()
 #
 #     def test_mice(self):
 #         hp = HomePageTopTest(self.driver)
 #         hp.miceLink()
+#         self.driver.back()
 #
 #     def test_headphones(self):
 #         hp = HomePageTopTest(self.driver)
 #         hp.headphonesLink()
+#         self.driver.back()
 
 
-class Special_Offer_Test(TestBase):
+# class Special_Offer_Test(TestBase):
+#
+#     @classmethod
+#     def setUpClass(cls):
+#         super().setUpClass()
+#
+#     def test_01_special_offer_image(self):
+#         so = SpecialOfferTest(self.driver)
+#         so.imageLocated()
+#
+#     def test_02_special_offer_link(self):
+#         so = SpecialOfferTest(self.driver)
+#         so.headerLocated()
+#
+#     def test_03_special_offer_button(self):
+#         so = SpecialOfferTest(self.driver)
+#         so.specialOfferButton()
+#         self.driver.back()
+
+class Explore_Now_Test(TestBase):
 
     @classmethod
     def setUpClass(cls):
         super().setUpClass()
 
-    def test_01_special_offer_image(self):
-        so = SpecialOfferTest(self.driver)
-        so.imageLocated()
-
-    def test_02_special_offer_link(self):
-        so = SpecialOfferTest(self.driver)
-        so.headerLocated()
-
-    def test_03_special_offer_button(self):
-        so = SpecialOfferTest(self.driver)
-        so.specialOfferButton()
-
+    def test_01_image_slider(self):
+        en = ExploreNowSlide(self.driver)
+        en.imagesCarousel()
 
 
 
