@@ -26,8 +26,6 @@ class LoginPage(BasePage):
     def UsernameLogin(self):
         self.enter_text(self.username_logIn, TestData.loginUserName)
 
-
-
     def PasswordLogin(self):
         self.enter_text(self.password_logIn, TestData.loginPassword)
 
