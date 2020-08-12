@@ -2,6 +2,7 @@ from selenium.webdriver.common.keys import Keys
 from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
 from selenium.webdriver.common.action_chains import ActionChains
+from selenium.webdriver.support.ui import Select
 import sys
 sys.path.append("C://Users/Denisa\Desktop/selenium/firstEcommerce")
 
@@ -70,6 +71,11 @@ class BasePage:
             element.click()
         else:
             print("The element is not selected")
+
+    def selectItem(self, by_locator, value):
+        element = Select(WebDriverWait(self.driver,3).until(EC.visibility_of_element_located(by_locator)))
+        element.select_by_value(value)
+
 
 
     def presence_located(self, by_locator):
