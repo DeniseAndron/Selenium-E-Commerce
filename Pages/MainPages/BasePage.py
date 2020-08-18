@@ -22,7 +22,7 @@ class BasePage:
 
     # this function performs click on web element whose locator is passed to it.
     def click(self, by_locator):
-        WebDriverWait(self.driver, 3).until(EC.visibility_of_element_located(by_locator)).click()
+        WebDriverWait(self.driver, 5).until(EC.visibility_of_element_located(by_locator)).click()
 
     #this functions presses the enter button
 

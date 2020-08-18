@@ -29,4 +29,3 @@ class ContactUsTest(TestBase):
     def test_05_send_button(self):
         cu = ContactUsForm(self.driver)
         cu.SendButton()
-        

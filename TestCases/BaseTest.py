@@ -21,6 +21,7 @@ class TestBase(unittest.TestCase):
         cls.driver = webdriver.Chrome(executables.CHROME_EXECUTABLE_PATH, options=chrome_options)
         cls.driver.get(TestData.baseURL)
         cls.driver.maximize_window()
+        time.sleep(3)
 
 
 
